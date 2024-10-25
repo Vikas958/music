@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music webpage</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="navbar">
+            <img src="./images/logo.png" alt="">
+            <ul>
+                <li><a href="#">HOME</a></li>
+                <li><a href="#">ABOUT</a></li>
+                <li><a href="#">CONTACT</a></li>
+                <li><a href="#">MORE</a></li>
+            </ul>
+        </div>
+        <div class="content">
+            <div class="left">THE<br>REAL<br>SOUND</div>
+            <div class="right">
+                <h2>Click here to Listen</h2>
+                <img src="./images/play.png" alt="" id="icon">
+            </div>
+        </div>
+    </div>
+    <audio id="mysong">
+        <source src="./03 - Naa Cheli Rojave - SenSongsMp3.Co.mp3">
+    </audio>
+    <script>
+        var mysong = document.getElementById("mysong");
+        var icon = document.getElementById("icon");
+        icon.onclick = function () {
+            if (mysong.paused) {
+                mysong.play();
+                icon.src = "./images/pause.png";
+            }
+            else {
+                mysong.pause();
+                icon.src = "./images/play.png";
+            }
+        }
+
+    </script>
+
+</body>
+
+</html>
